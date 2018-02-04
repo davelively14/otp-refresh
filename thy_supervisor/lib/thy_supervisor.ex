@@ -18,7 +18,7 @@ defmodule ThySupervisor do
     state =
       child_spec_list
       |> start_children
-      |> Enum.into(HashDict.new)
+      |> Enum.into(Map.new)
 
     {:ok, state}
   end
